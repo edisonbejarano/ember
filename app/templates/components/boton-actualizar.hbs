@@ -1,0 +1,13 @@
+<div align="center">
+  <i class="fa fa-pencil-square fa-lg {{record.customClass}}" style="cursor:pointer" onclick={{action "mostrar_ventana" "actualizar" }}></i>  
+  {{#bs-modal open=mdlComponent onHidden=(action (mut mdlComponent) false) as |modal|}}
+    {{#modal.header}}
+      <h2 class="modal-title">
+        {{frmTitleActualizar}}
+      </h2>
+    {{/modal.header}}
+    {{#modal.body}}
+      {{component frmComponentActualizar model=record}}
+    {{/modal.body}}
+  {{/bs-modal}}
+</div>

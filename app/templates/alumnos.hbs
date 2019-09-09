@@ -1,0 +1,18 @@
+<div class="fgContainer">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active"><b>Gestion Alumnos</b></li>
+  </ol>
+</nav>
+  {{cntrl-grid
+    model=model.alumnos
+    frmComponentCrear=""
+    frmTitleCrear="Nuevo Alumno"
+    modelCreator=model.alumnos.modelCreator
+    frmComponentImprimir=true
+    modelImprimir=model.alumnos
+    hashColumns=(hash
+    editRow=(component "boton-actualizar" frmComponentActualizar="" frmTitleActualizar="Actualizar Alumno")
+    )
+  }}
+</div>
